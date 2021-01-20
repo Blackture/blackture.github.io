@@ -64,7 +64,7 @@
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item"></li>
                         <li class="nav-item dropdown" href="projects.html"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false">Projects</a>
-                            <div class="dropdown-menu"><a class="dropdown-item disabled" href="projects.html">Overview</a>
+                            <div class="dropdown-menu"><a class="dropdown-item" href="projects.html">Overview</a>
                                 <div class="dropdown-divider"></div>
                                 <h6 class="dropdown-header">Games</h6><a class="dropdown-item" href="devils-hunt.html">Devils Hunt</a><a class="dropdown-item" href="https://github.com/blaxrewstudios/RCB">RCB</a><a class="dropdown-item" href="las.html">LaS</a><a class="dropdown-item" href="fallen_world.html">Fallen Wold</a><a class="dropdown-item" href="driving_simulator.html">Driving Simulator</a>
                                 <div class="dropdown-divider"></div>
@@ -78,95 +78,111 @@
             </div>
         </nav>
     </div>
-    <div class="text-light bg-dark projects-horizontal">
+    <div class="bg-dark" style="padding-bottom: 16px;padding-top: 16px;">
         <div class="container">
-            <div class="intro">
-                <h2 class="text-center">Projects </h2>
-                <p class="text-center text-white-50">This&nbsp; is&nbsp; our list of&nbsp; projects made by us<br>Have fun at trying the m out</p>
-            </div>
-            <div class="row projects">
-                <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/image005.png"></a></div>
-                        <div class="col">
-                            <h3 class="name">Devils Hunt</h3>
-                            <p class="text-white-50 description">A software related boardgame<br>(Multiplayer, Singleplayer, Realife boardgame)<br></p><a class="btn btn-outline-primary btn-block btn-sm" role="button" style="margin-top: 5px;margin-left: 0px;" href="devils-hunt.html">Learn More</a>
+            <div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" href="#tab-1">Album</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-2">Title</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-3">Tab 3</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" role="tabpanel" id="tab-1">
+                        <div style="margin-top: 1%;"><a class="btn btn-primary" data-toggle="collapse" aria-expanded="true" aria-controls="collapse-1" href="#collapse-1" role="button"><img style="width: 100px;height: 100px;" src="assets/img/folder.jpg">&nbsp; &nbsp; Just Happy :)</a>
+                            <div class="collapse show" id="collapse-1">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 84px;"></th>
+                                                <th style="width: 12px;"></th>
+                                                <th class="text-left">Title</th>
+                                                <th class="text-left">Artist/s</th>
+                                                <th class="text-left">Duration</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><img src="assets/img/folder.jpg" style="width: 50px;"></td>
+                                                <td style="padding-bottom: 0px;"><button class="btn btn-primary border rounded-circle border-primary" type="button" style="margin-top: 1%;" onclick="ChangeTrack(&quot;Just Happy :)&quot;, &quot;Faded&quot;, &quot;Patrick&quot;, &quot;https://www.dropbox.com/s/j45gcmdm7gvzvz6/1%20in%202021%20with%20voice.mp3?dl=1&quot;)"><i class="fa fa-play"></i></button></td>
+                                                <td>
+                                                    <p class="text-left" style="margin-top: 3.5%;">Faded</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-left" style="margin-top: 3.5%;">Patrick</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-left" style="margin-top: 3.5%;">2:26</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="assets/img/folder.jpg" style="width: 50px;"></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/image0005%20-%20Kopie.png" style="margin-top: 10px;"></a></div>
-                        <div class="col">
-                            <h3 class="name">Fallen World</h3>
-                            <p class="text-white-50 description">A 3D story game (planned with RTX). This game includes a time paradox and an invasion<br></p><button class="btn btn-outline-primary btn-block btn-sm" type="button" style="margin-top: 5px;margin-bottom: 10px;margin-left: 0px;">Learn More</button>
-                        </div>
+                    <div class="tab-pane" role="tabpanel" id="tab-2">
+                        <p>Content for tab 2.</p>
                     </div>
-                </div>
-                <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/Banner%201%201920x1080.png" style="margin-top: 5px;"></a></div>
-                        <div class="col">
-                            <h3 class="name">LaS</h3>
-                            <p class="text-white-50 description">Lights and Shadows is a mini adventure game in which you go the way of lights or shadows.<br></p><a class="btn btn-outline-primary btn-block btn-sm" role="button" style="margin-top: 5px;margin-left: 0px;" href="las.html">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/image0005%20-%20Kopie.png" style="margin-top: 5px;"></a></div>
-                        <div class="col">
-                            <h3 class="name">Trix Pong</h3>
-                            <p class="text-white-50 description">This is a game completely developed by H4rdw4r3. It is a mini soccer game<br></p><button class="btn btn-outline-primary disabled btn-block btn-sm" type="button" style="margin-top: 5px;margin-left: 0px;" disabled="">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/image0005%20-%20Kopie.png" style="margin-top: 5px;"></a></div>
-                        <div class="col">
-                            <h3 class="name">Filming Project</h3>
-                            <p class="text-white-50 description">You only get access to it on request. Because it is only available for a group of persons<br></p><a class="btn btn-outline-primary btn-block btn-sm" role="button" style="margin-top: 5px;margin-left: 0px;" href="about.html#contact">Contact us</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/Unbenannt.png"></a></div>
-                        <div class="col">
-                            <h3 class="name">MD Script</h3>
-                            <p class="text-white-50 description">This is called minecraft datapack script and is build to visualize and simplify the datapack creation<br></p><a class="btn btn-outline-primary btn-block btn-sm" role="button" style="margin-top: 5px;margin-bottom: 10px;margin-left: 0px;" href="https://blackture.github.io/mdscript/">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/image0005%20-%20Kopie.png" style="margin-top: 5px;"></a></div>
-                        <div class="col">
-                            <h3 class="name">RCB</h3>
-                            <p class="text-white-50 description">Random Characteristics Battle is a minigame built in the Windows Command Prompt</p><a class="btn btn-outline-primary btn-block btn-sm" role="button" style="margin-top: 5px;margin-left: 0px;" href="https://github.com/blaxrewstudios/RCB">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/image0005%20-%20Kopie.png" style="margin-top: 5px;"></a></div>
-                        <div class="col">
-                            <h3 class="name">Driving Simulator</h3>
-                            <p class="text-white-50 description">A driving simulator to train to drive with a trailer. (TMX Pro compatible)</p><a class="btn btn-outline-primary btn-block btn-sm" role="button" style="margin-top: 5px;margin-left: 0px;" href="driving_simulator.html">Learn More</a>
-                        </div>
+                    <div class="tab-pane" role="tabpanel" id="tab-3">
+                        <p>Content for tab 3.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div></div>
+    <div class="bg-dark" style="padding-bottom: 16px;padding-top: 16px;">
+        <div class="container d-flex">
+            <div class="col" style="width: 24%;">
+                <div class="d-flex"><img class="img-fluid d-xl-flex justify-content-xl-center align-items-xl-center" id="cover" width="100px" height="100px" src="assets/img/BXS%20TRANSPARENT%20NON%20TEXT.png" style="margin-left: 0px;" alt="Cover">
+                    <div class="card text-light bg-dark border-dark" style="margin-left: 5%;">
+                        <div class="card-body">
+                            <h4 class="card-title" id="songTitle">Faded</h4>
+                            <h6 class="text-muted card-subtitle mb-2" id="songArtist">Patrick</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="width: 48%;"><audio id="myAudio" controls="" controlslist="nodownload"></audio>
+                <div class="d-inline-flex" style="margin-top: 5%;">
+                    <div class="col">
+                        <div><button class="btn btn-primary border rounded-circle border-primary" id="play" type="button" style="margin-bottom: 10px;margin-top: 10px;width: 40px;height: auto;min-width: 40px;" onclick="Play()"><i class="fa fa-play"></i></button><button class="btn btn-primary border rounded-circle border-primary" id="stop" type="button" style="margin-bottom: 10px;margin-top: 10px;display: none;width: 40px;height: 40px;" onclick="Stop()"><i class="fa fa-stop"></i></button></div>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col" style="padding-top: 1.25%;">
+                                        <div class="row">
+                                            <div class="col"><input class="custom-range" type="range" id="timeA" onchange="Seek(this.value)" min="0" max="1000" step="1" onmousedown="OnSeekClick()" onmouseup="OnSeekClick()" style="width: 400px;" value="0"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col text-light">
+                                                <p id="timeStamp">0:0/0:0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-inline-flex float-right" style="width: 24%;padding-top: 1.5%;">
+                <div class="d-inline-flex float-left"><button class="btn btn-outline-primary btn-block border rounded-pill border-primary d-inline-flex" type="button" style="height: 60px;width: 78px;padding-bottom: 0px;padding-top: 0px;margin-top: 0px;margin-bottom: 0px;padding-left: 5px;" onclick="OnMute()"><i class="fas fa-volume-up" id="up-volume" style="font-size: 58px; display:none"></i><i class="fas fa-volume-mute" id="muted-volume" style="font-size: 58px; display:none"></i><i class="fas fa-volume-down" id="low-volume" style="font-size: 58px"></i><i class="fas fa-volume-off" id="off-volume" style="font-size: 58px; display:none"></i></button></div><input class="custom-range" type="range" id="volume" style="width: 700px;margin-top: 7.25%;" min="0" max="1" step="0.01" onchange="ChangeVol(this.value)">
+            </div>
+        </div>
+    </div>
     <div class="footer-dark">
         <footer>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-md-3 item">
-                        <h3><strong>Our work</strong><br></h3>
+                        <h3>Our work</h3>
                         <ul>
                             <li><a href="#">Software &amp; Game Development</a></li>
                             <li><a href="#">3D Modelling &amp; Animation</a></li>
@@ -184,7 +200,7 @@
                         </ul>
                     </div>
                     <div class="col-md-6 item text">
-                        <h3>BlaXrew Studios</h3>
+                        <h3>BlaXrew Studios<br></h3>
                         <p>Here you can find our&nbsp; &nbsp;terms and policies:&nbsp;&nbsp;<br>-&nbsp; <a href="privacy%20policy.html">Privacy Policy</a><br>- <a href="Terms%20of%20Service.html">Terms of service</a><br>- <a href="impressum.html">Impressum (DE)</a></p>
                     </div>
                     <div class="col item social"><a href="http://twitter.com/blaxrew"><i class="icon ion-social-twitter"></i></a><a href="https://www.youtube.com/channel/UChOC9uRCoD2-5hzFGEnnOJA"><i class="icon ion-social-youtube"></i></a><a href="http://github.com/blaxrewstudios"><i class="icon ion-social-github"></i></a><a href="https://steamcommunity.com/groups/blaxrew-studios"><i class="fab fa-steam-symbol"></i></a><a href="https://discord.com/invite/ySRCsyW"><i class="fab fa-discord"></i></a><a href="mailto:blaxrewstudios.official@gmail.com"><i class="icon ion-ios-email"></i></a></div>
