@@ -17,7 +17,19 @@ function ChangeTrack(album, title, artist_s, src) {
 
 function Play() {
     try {
-        var x = document.getElementById("myAudio"); 
+        var x = document.getElementById("myAudio");
+        x.onplaying = function() {
+            var pli = document.getElementById("stop-icon");
+            var sp = document.getElementById("load");
+            sp.style.display = "none";
+            pli.style.display = "block"
+        };
+        x.onplay = function() {
+            var pli = document.getElementById("stop-icon");
+            var sp = document.getElementById("load");
+            sp.style.display = "block";
+            pli.style.display = "none"
+        };
         if (!x.canPlayType) window.alert("Nope, your browser is too stupid!");
         if (x.currentSrc != link) 
         {
@@ -74,11 +86,11 @@ function Main() {
     if (!onSeekClick) 
         t.value = (x.currentTime / x.duration) * 1000;
     
-        var d_min = Math.round(x.duration / 60);
-        var d_sec = Math.round(x.duration - 60*d_min)
-
-        var c_min = Math.round(x.currentTime / 60);
-        var c_sec = Math.round(x.currentTime - 60*c_min)
+        var d_min = Math.trunc(x.duration / 60);
+        var d_sec = Math.trunc(x.duration - 60*d_min);
+        
+        var c_min = Math.trunc(x.currentTime / 60);
+        var c_sec = Math.trunc(x.currentTime - 60*c_min);
         
         if (!Number.isNaN(d_min) && !Number.isNaN(d_sec) && !Number.isNaN(c_min) && !Number.isNaN(c_sec)) 
             ts.innerHTML = pad(c_min) + ":" + pad(c_sec) + " | " + pad(d_min) + ":" + pad(d_sec);
