@@ -5,10 +5,10 @@ var link = "";
 function ChangeTrack(album, title, artist_s, src) {
     switch (album) {
         case "Just Happy :)":
-            document.getElementById("cover").src = "Music/folder.jpg"
+            document.getElementById("cover").src = "assets/img/Music/folder.jpg"
             break;
         case "The Weird One":
-            document.getElementById("cover").src = "Music/the_weird_one.png"
+            document.getElementById("cover").src = "assets/img/Music/the_weird_one.jpg"
             break;
     }
 
