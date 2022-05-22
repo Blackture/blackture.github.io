@@ -5,7 +5,10 @@ var link = "";
 function ChangeTrack(album, title, artist_s, src) {
     switch (album) {
         case "Just Happy :)":
-            document.getElementById("cover").src = "folder.jpg"
+            document.getElementById("cover").src = "Music/folder.jpg"
+            break;
+        case "The Weird One":
+            document.getElementById("cover").src = "Music/the_weird_one.png"
             break;
     }
 
@@ -18,21 +21,20 @@ function ChangeTrack(album, title, artist_s, src) {
 function Play() {
     try {
         var x = document.getElementById("myAudio");
-        x.onplaying = function() {
+        x.onplaying = function () {
             var pli = document.getElementById("stop-icon");
             var sp = document.getElementById("load");
             sp.style.display = "none";
             pli.style.display = "block"
         };
-        x.onplay = function() {
+        x.onplay = function () {
             var pli = document.getElementById("stop-icon");
             var sp = document.getElementById("load");
             sp.style.display = "block";
             pli.style.display = "none"
         };
         if (!x.canPlayType) window.alert("Nope, your browser is too stupid!");
-        if (x.currentSrc != link) 
-        {
+        if (x.currentSrc != link) {
             x.src = link;
             x.load();
         }
@@ -49,7 +51,7 @@ function Play() {
 
 function Stop() {
     try {
-        var x = document.getElementById("myAudio"); 
+        var x = document.getElementById("myAudio");
         x.pause();
         document.getElementById("stop").style.display = "none";
         document.getElementById("play").style.display = "block";
@@ -67,7 +69,7 @@ function Seek(value) {
 function ChangeVol(value) {
     var x = document.getElementById("myAudio");
     UpdateVol(value);
-    x.volume = value; 
+    x.volume = value;
 }
 
 function OnSeekClick() {
@@ -82,22 +84,22 @@ function Main() {
     var t = document.getElementById("timeA");
     var ts = document.getElementById("timeStamp");
     var x = document.getElementById("myAudio");
-    
-    if (!onSeekClick) 
+
+    if (!onSeekClick)
         t.value = (x.currentTime / x.duration) * 1000;
-    
-        var d_min = Math.trunc(x.duration / 60);
-        var d_sec = Math.trunc(x.duration - 60*d_min);
-        
-        var c_min = Math.trunc(x.currentTime / 60);
-        var c_sec = Math.trunc(x.currentTime - 60*c_min);
-        
-        if (!Number.isNaN(d_min) && !Number.isNaN(d_sec) && !Number.isNaN(c_min) && !Number.isNaN(c_sec)) 
-            ts.innerHTML = pad(c_min) + ":" + pad(c_sec) + " | " + pad(d_min) + ":" + pad(d_sec);
-        else {
-            ts.innerHTML = "00:00 | 00:00"
-        }
-    
+
+    var d_min = Math.trunc(x.duration / 60);
+    var d_sec = Math.trunc(x.duration - 60 * d_min);
+
+    var c_min = Math.trunc(x.currentTime / 60);
+    var c_sec = Math.trunc(x.currentTime - 60 * c_min);
+
+    if (!Number.isNaN(d_min) && !Number.isNaN(d_sec) && !Number.isNaN(c_min) && !Number.isNaN(c_sec))
+        ts.innerHTML = pad(c_min) + ":" + pad(c_sec) + " | " + pad(d_min) + ":" + pad(d_sec);
+    else {
+        ts.innerHTML = "00:00 | 00:00"
+    }
+
     if (x.ended) {
         document.getElementById("stop").style.display = "none";
         document.getElementById("play").style.display = "block";
@@ -118,12 +120,12 @@ function OnMute() {
 
 function UpdateVol(value) {
     var x = document.getElementById("myAudio");
-    
+
     var low = document.getElementById("low-volume");
     var up = document.getElementById("up-volume");
     var off = document.getElementById("off-volume");
     var muted = document.getElementById("muted-volume");
-    
+
     if (!x.muted) {
         if (muted.style.display == "block") muted.style.display = "none";
         if (value <= 0.66 && value > 0) {
