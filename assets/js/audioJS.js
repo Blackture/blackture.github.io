@@ -8,7 +8,7 @@ function ChangeTrack(album, title, artist_s, src) {
             document.getElementById("cover").src = "assets/img/Music/folder.jpg"
             break;
         case "The Weird One":
-            document.getElementById("cover").src = "assets/img/Music/the_weird_one.jpg"
+            document.getElementById("cover").src = "assets/img/Music/the_weird_one.png"
             break;
     }
 
