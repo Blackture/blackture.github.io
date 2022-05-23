@@ -25,13 +25,13 @@ function Play() {
             var pli = document.getElementById("stop-icon");
             var sp = document.getElementById("load");
             sp.style.display = "none";
-            pli.style.display = "block"
+            pli.style.display = "block";
         };
         x.onplay = function () {
             var pli = document.getElementById("stop-icon");
             var sp = document.getElementById("load");
             sp.style.display = "block";
-            pli.style.display = "none"
+            pli.style.display = "none";
         };
         if (!x.canPlayType) window.alert("Nope, your browser is too stupid!");
         if (x.currentSrc != link) {

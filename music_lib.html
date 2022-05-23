@@ -91,12 +91,12 @@
                     <div class="tab-pane active" role="tabpanel" id="tab-1">
                         <div>
                             <ul class="nav nav-tabs" role="tablist">
-                                <li class="nav-item" role="presentation" style="width: 33%;"><a class="nav-link active" role="tab" data-toggle="tab" href="#tab-4">
+                                <li class="nav-item" role="presentation" style="width: 33%;min-width: 200px;"><a class="nav-link active" role="tab" data-toggle="tab" href="#tab-4">
                                         <div class="d-flex justify-content-xl-start"><img class="img-fluid float-left d-xl-flex justify-content-xl-start align-items-xl-center" style="width: 100px;height: 100px;margin-right:5%" src="assets/img/Music/folder.jpg">
                                             <p class="float-left d-xl-flex justify-content-xl-start align-items-xl-center" style="height: 100px;margin-bottom: 0px;">Just Happy :)</p>
                                         </div>
                                     </a></li>
-                                <li class="nav-item" role="presentation" style="width: 33%;"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-5">
+                                <li class="nav-item" role="presentation" style="width: 33%;min-width: 200px;"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-5">
                                         <div class="d-flex justify-content-xl-start"><img class="img-fluid float-left d-xl-flex justify-content-xl-start align-items-xl-center" style="width: 100px;height: 100px;margin-right:5%" src="assets/img/Music/the_weird_one.png">
                                             <p class="float-left d-xl-flex justify-content-xl-start align-items-xl-center" style="height: 100px;margin-bottom: 0px;">The Weird One</p>
                                         </div>
@@ -712,44 +712,49 @@
         </div>
     </div>
     <div class="bg-dark" style="padding-bottom: 16px;padding-top: 16px;">
-        <div class="container d-flex">
-            <div class="col" style="width: 24%;">
-                <div class="d-flex"><img class="img-fluid d-xl-flex justify-content-xl-center align-items-xl-center" id="cover" width="100px" height="100px" src="assets/img/BXS_Logo/BXS%20TRANSPARENT%20NON%20TEXT.png" style="margin-left: 0px;width: 100px;height: 100px;" alt="Cover" loading="eager">
-                    <div class="card text-light bg-dark border-dark" style="margin-left: 5%;">
-                        <div class="card-body">
-                            <h4 class="text-truncate card-title" id="songTitle">None</h4>
-                            <h6 class="text-truncate text-muted card-subtitle mb-2" id="songArtist">None</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col" style="width: 48%;"><audio id="myAudio" controls="" controlslist="nodownload"></audio>
-                <div class="d-inline-flex" style="margin-top: 5%;">
-                    <div class="col">
-                        <div><button class="btn btn-primary border rounded-circle border-primary" id="play" type="button" style="margin-bottom: 10px;margin-top: 10px;width: 40px;height: 40px;min-width: 40px;" onclick="Play()"><i class="fa fa-play"></i></button><button class="btn btn-primary border rounded-circle border-primary" id="stop" type="button" style="display: none;width: 40px;height: 40px;padding-left: 16.35%;margin-top: 10px;margin-bottom: 10px;" onclick="Stop()"><i class="fa fa-stop" id="stop-icon" style="display: block;margin-left:16.25%;"></i><span class="spinner-border float-none" role="status" id="load" style="display:none;text-align: center;width: 20px;height: 20px;"></span></button></div>
-                    </div>
-                    <div class="col">
-                        <div class="row">
-                            <div class="col">
-                                <div class="row">
-                                    <div class="col" style="padding-top: 1.25%;">
-                                        <div class="row">
-                                            <div class="col"><input class="custom-range" type="range" id="timeA" onchange="Seek(this.value)" min="0" max="1000" step="1" onmousedown="OnSeekClick()" onmouseup="OnSeekClick()" style="width: 400px;" value="0"></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col text-light">
-                                                <p id="timeStamp">0:0/0:0</p>
-                                            </div>
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr>
+                            <td style="width: 24%;">
+                                <div class="d-flex justify-content-xl-start align-items-xl-center"><img class="img-fluid d-inline-block d-xl-flex justify-content-xl-center align-items-xl-center" id="cover" width="100px" height="100px" src="assets/img/BXS_Logo/BXS%20TRANSPARENT%20NON%20TEXT.png" style="margin-left: 0px;width: 100px;" alt="Cover" loading="eager">
+                                    <div class="card text-light bg-dark border-dark" style="margin-left: 5%;">
+                                        <div class="card-body" style="padding: 0;">
+                                            <h4 class="text-truncate card-title" id="songTitle">None</h4>
+                                            <h6 class="text-truncate text-muted card-subtitle mb-2" id="songArtist">None</h6>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col d-inline-flex float-right" style="width: 24%;padding-top: 1.5%;">
-                <div class="d-inline-flex float-left"><button class="btn btn-outline-primary btn-block border rounded-pill border-primary d-inline-flex" type="button" style="height: 60px;width: 78px;padding-bottom: 0px;padding-top: 0px;margin-top: 0px;margin-bottom: 0px;padding-left: 5px;" onclick="OnMute()"><i class="fas fa-volume-up" id="up-volume" style="font-size: 58px; display:none"></i><i class="fas fa-volume-mute" id="muted-volume" style="font-size: 58px; display:none"></i><i class="fas fa-volume-down" id="low-volume" style="font-size: 58px"></i><i class="fas fa-volume-off" id="off-volume" style="font-size: 58px; display:none"></i></button></div><input class="custom-range" type="range" id="volume" style="width: 700px;margin-top: 7.25%;" min="0" max="1" step="0.01" onchange="ChangeVol(this.value)">
+                            </td>
+                            <td style="width: 7.5%;padding-right: 0;">
+                                <div class="d-xl-flex justify-content-xl-center align-items-xl-center" style="height: 100%;min-height: 100px;"><button class="btn btn-primary border rounded-circle border-primary" id="stop" type="button" style="width: 40px;height: 40px;margin: 0;padding: 0;display: none;" onclick="Stop()"><i class="fa fa-stop" id="stop-icon" style="width: 40px;height: 40px;display: block;padding-top: 11px;padding-right: 2.5px;"></i><span class="spinner-border" role="status" id="load" style="text-align: center;width: 20px;height: 20px;display: none;padding-top: 11px;margin-left: 9px;"></span></button><button class="btn btn-primary border rounded-circle border-primary" id="play" type="button" style="width: 40px;height: 40px;min-width: 40px;padding: 0;margin: 0;display: block;" onclick="Play()"><i class="fa fa-play d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center" style="width: 40px;height: 40px;"></i></button></div>
+                            </td>
+                            <td style="width: 44.5%;padding-left: 0;">
+                                <div class="d-xl-flex justify-content-xl-start align-items-xl-center" style="height: 100%;min-height: 100px;">
+                                    <div class="table-responsive" style="height: 100%;">
+                                        <table class="table table-borderless">
+                                            <tbody style="height: 100%;">
+                                                <tr style="height: 50%;">
+                                                    <td style="padding: 0;"><input class="custom-range d-xl-flex align-items-xl-end" type="range" id="timeA" onchange="Seek(this.value)" min="0" max="1000" step="1" onmousedown="OnSeekClick()" onmouseup="OnSeekClick()" value="0" style="min-height: 50px;"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding: 0;">
+                                                        <p class="text-light" id="timeStamp" style="min-height: 50px;">0:0/0:0</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div><audio class="d-none sr-only invisible" id="myAudio" preload="auto" controlslist="nodownload" controls=""></audio>
+                                </div>
+                            </td>
+                            <td style="width: 5%;padding-right: 0;">
+                                <div class="d-xl-flex flex-shrink-1 align-items-xl-center" style="height: 100%;min-height: 100px;"><button class="btn btn-outline-primary border rounded-pill border-primary" type="button" style="padding-bottom: 0px;margin-top: 0px;margin-bottom: 0px;padding-left: 5px;padding-top: 0px;" onclick="OnMute()"><i class="fas fa-volume-up" id="up-volume" style="display: none;"></i><i class="fas fa-volume-mute" id="muted-volume" style="font-size: 58px; display:none"></i><i class="fas fa-volume-down" id="low-volume" style="font-size: 58px"></i><i class="fas fa-volume-off" id="off-volume" style="font-size: 58px; display:none"></i></button></div>
+                            </td>
+                            <td style="width: 19%;padding-left: 0;"><input class="custom-range d-flex float-left justify-content-xl-start" type="range" id="volume" min="0" max="1" step="0.01" onchange="ChangeVol(this.value)" style="height: 100%;min-height: 100px;"></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
